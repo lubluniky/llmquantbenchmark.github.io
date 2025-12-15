@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Quant Benchmark: Extended Strategic Audit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto+Mono:wght@400;500&family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --border-color: #000000;
+        }
+
+        body { 
+            background-color: #f3f4f6; 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            -webkit-font-smoothing: antialiased;
+            padding: 40px 0;
+        }
+
+        .paper {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        h1, h2, h3 { font-family: 'Merriweather', serif; color: #000; }
+        
+        .mono { font-family: 'Roboto Mono', monospace; }
+
+        .header-line { border-bottom: 3px solid #000; margin-bottom: 2px; }
+        .header-line-thin { border-bottom: 1px solid #000; margin-bottom: 40px; }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .metric-card {
+            border: 1px solid #e5e7eb;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .metric-card.winner {
+            background-color: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+        
+        .metric-card.winner .label { color: #9ca3af; }
+        .metric-card.winner .value { color: #fff; }
+
+        .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #666; margin-bottom: 5px; }
+        .value { font-family: 'Merriweather', serif; font-size: 1.8rem; font-weight: 900; }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 0.9rem; }
+        th { text-align: left; border-bottom: 2px solid #000; padding: 10px; font-family: 'Inter', sans-serif; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; }
+        td { border-bottom: 1px solid #e5e7eb; padding: 10px; vertical-align: middle; }
+        tr:last-child td { border-bottom: 1px solid #000; }
+
+        .scenario-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border: 1px solid #000;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .watermark {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-family: 'Merriweather', serif;
+            font-size: 0.8rem;
+            color: #d1d5db;
+            transform: rotate(-90deg);
+            transform-origin: bottom right;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .paper { box-shadow: none; border: none; padding: 0; margin: 0; width: 100%; max-width: 100%; }
+            .watermark { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="watermark">INTERNAL AUDIT ONLY • CONFIDENTIAL</div>
+
+    <div class="paper">
+        
+        <!-- Header -->
+        <div class="header-line"></div>
+        <div class="header-line-thin"></div>
+        
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <div class="label">Research Division • Algorithmic Intelligence</div>
+                <h1 class="text-4xl font-black mt-2">LLM Quant Benchmark<br>Extended Audit Report</h1>
+            </div>
+            <div class="text-right">
+                <div class="mono text-sm">REF: 2025-Q4-EXT</div>
+                <div class="mono text-sm">DATE: DEC 15, 2025</div>
+                <div class="mono text-sm font-bold">STATUS: FINALIZED</div>
+            </div>
+        </div>
+
+        <!-- Executive Summary Metrics -->
+        <div class="metric-grid">
+            <div class="metric-card winner">
+                <div class="label">Top Generalist</div>
+                <div class="value">Gemini 3 Pro</div>
+                <div class="text-xs mt-2 mono">Score: 95.75</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Top Researcher</div>
+                <div class="value">Gemini 3 Pro</div>
+                <div class="text-xs mt-2 text-gray-500">Score: 97.40</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Best Execution</div>
+                <div class="value">Sonnet 4.5</div>
+                <div class="text-xs mt-2 text-gray-500">Cost Efficiency Leader</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Highest Alpha</div>
+                <div class="value">GPT-5.1</div>
+                <div class="text-xs mt-2 text-red-600">Risk Adjusted: Poor</div>
+            </div>
+        </div>
+
+        <!-- 01. Scenario Analysis Tables -->
+        <div class="mb-12">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold border-b border-gray-200 pb-2 uppercase tracking-widest text-xs flex-grow">01. Scenario Analysis</h3>
+            </div>
+            
+            <!-- Scenario A -->
+            <h4 class="text-sm font-bold mb-2 mt-6">A. General Partner (25% Equal Weight)</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="w-10">#</th>
+                        <th>Model</th>
+                        <th class="text-right">Math</th>
+                        <th class="text-right">ML</th>
+                        <th class="text-right">NLP</th>
+                        <th class="text-right">Exec</th>
+                        <th class="text-right bg-gray-50">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-bold">1</td>
+                        <td class="font-bold">Gemini 3 Pro</td>
+                        <td class="text-right mono">87</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono">96</td>
+                        <td class="text-right mono bg-gray-50 font-bold">95.75</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">2</td>
+                        <td class="font-bold">Claude Opus 4.5</td>
+                        <td class="text-right mono">97</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono text-orange-600">70</td>
+                        <td class="text-right mono">99</td>
+                        <td class="text-right mono bg-gray-50 font-bold">91.50</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">3</td>
+                        <td class="font-bold">Claude Sonnet 4.5</td>
+                        <td class="text-right mono text-red-600">60</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono">99</td>
+                        <td class="text-right mono bg-gray-50 font-bold">89.75</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold text-gray-400">4</td>
+                        <td class="font-bold text-gray-500">GPT-5.1 Codex</td>
+                        <td class="text-right mono text-red-600">47</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono text-red-600">66</td>
+                        <td class="text-right mono bg-gray-50 font-bold text-gray-500">78.25</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Scenario B -->
+            <h4 class="text-sm font-bold mb-2 mt-8">B. Quant Researcher (ML 40% | NLP 40% | Math 20%)</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="w-10">#</th>
+                        <th>Model</th>
+                        <th class="text-right">Math (20%)</th>
+                        <th class="text-right font-bold border-l border-gray-300">ML (40%)</th>
+                        <th class="text-right font-bold">NLP (40%)</th>
+                        <th class="text-right text-gray-300">Exec (0%)</th>
+                        <th class="text-right bg-gray-50">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-bold">1</td>
+                        <td class="font-bold">Gemini 3 Pro</td>
+                        <td class="text-right mono">87</td>
+                        <td class="text-right mono border-l border-gray-300">100</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono text-gray-300">--</td>
+                        <td class="text-right mono bg-gray-50 font-bold">97.40</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">2</td>
+                        <td class="font-bold text-blue-800">Claude Sonnet 4.5</td>
+                        <td class="text-right mono text-red-600">60</td>
+                        <td class="text-right mono border-l border-gray-300">100</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono text-gray-300">--</td>
+                        <td class="text-right mono bg-gray-50 font-bold text-blue-800">92.00</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">3</td>
+                        <td class="font-bold text-blue-800">GPT-5.1 Codex</td>
+                        <td class="text-right mono text-red-600">47</td>
+                        <td class="text-right mono border-l border-gray-300">100</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono text-gray-300">--</td>
+                        <td class="text-right mono bg-gray-50 font-bold text-blue-800">89.40</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold text-gray-400">4</td>
+                        <td class="font-bold text-gray-500">Claude Opus 4.5</td>
+                        <td class="text-right mono">97</td>
+                        <td class="text-right mono border-l border-gray-300">100</td>
+                        <td class="text-right mono text-orange-600">70</td>
+                        <td class="text-right mono text-gray-300">--</td>
+                        <td class="text-right mono bg-gray-50 font-bold text-gray-500">87.40</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 02. Role Suitability (Bar Chart) -->
+        <div class="mb-12">
+            <h3 class="text-lg font-bold border-b border-gray-200 pb-2 uppercase tracking-widest text-xs">02. Role Suitability Comparison</h3>
+            <div class="h-64 mt-4">
+                <canvas id="comparisonChart"></canvas>
+            </div>
+        </div>
+
+        <!-- 03. Advanced Analytics (NEW SECTION) -->
+        <div class="mb-12">
+            <h3 class="text-lg font-bold border-b border-gray-200 pb-2 uppercase tracking-widest text-xs">03. Advanced Analytics</h3>
+            
+            <div class="grid grid-cols-2 gap-8 mt-6">
+                <!-- Stacked Decomposition -->
+                <div>
+                    <h4 class="text-xs font-bold text-center uppercase mb-4 text-gray-500">Score Decomposition (Contribution)</h4>
+                    <div class="h-64">
+                        <canvas id="stackedScoreChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center mt-2 text-gray-500 italic">Breakdown of points by benchmark phase.</p>
+                </div>
+
+                <!-- Efficiency Frontier -->
+                <div>
+                    <h4 class="text-xs font-bold text-center uppercase mb-4 text-gray-500">Execution Efficiency Frontier (Wave 4)</h4>
+                    <div class="h-64">
+                        <canvas id="executionScatterChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center mt-2 text-gray-500 italic">X: Time (min), Y: Cost ($). Bottom-left is ideal.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04. Technical Charts -->
+        <div class="mb-12">
+            <h3 class="text-lg font-bold border-b border-gray-200 pb-2 uppercase tracking-widest text-xs">04. Technical Performance</h3>
+            <div class="grid grid-cols-2 gap-8 mt-6">
+                <div>
+                    <h4 class="text-xs font-bold text-center uppercase mb-4 text-gray-500">Competency Radar</h4>
+                    <div class="h-64">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-center uppercase mb-4 text-gray-500">Simulated Equity Curve (Phase III)</h4>
+                    <div class="h-64">
+                        <canvas id="equityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-16 pt-8 border-t border-gray-300 text-center text-xs text-gray-400 font-serif">
+            <p>Generated by Ultimate Quant Benchmark Suite • Extended Version 2.1</p>
+            <p>Confidential • Internal Use Only</p>
+        </div>
+
+    </div>
+
+    <script>
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = '#333';
+        
+        // 1. Comparison Chart (Roles)
+        new Chart(document.getElementById('comparisonChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Gemini 3 Pro', 'Claude Sonnet 4.5', 'Claude Opus 4.5', 'GPT-5.1'],
+                datasets: [
+                    {
+                        label: 'Scenario A: General Partner',
+                        data: [95.75, 89.75, 91.50, 78.25],
+                        backgroundColor: '#1a1a1a',
+                        barPercentage: 0.6,
+                        categoryPercentage: 0.8
+                    },
+                    {
+                        label: 'Scenario B: Quant Researcher',
+                        data: [97.40, 92.00, 87.40, 89.40],
+                        backgroundColor: '#9ca3af',
+                        barPercentage: 0.6,
+                        categoryPercentage: 0.8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { min: 70, max: 100, grid: { color: '#f3f4f6' } }, x: { grid: { display: false } } },
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+
+        // 2. Stacked Score Chart (Decomposition)
+        // Normalized contributions (approx 25 pts per wave max)
+        new Chart(document.getElementById('stackedScoreChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Gemini 3 Pro', 'Sonnet 4.5', 'Opus 4.5', 'GPT-5.1'],
+                datasets: [
+                    { label: 'Math/Risk', data: [21.75, 15, 24.25, 11.75], backgroundColor: '#1a1a1a' }, // W1
+                    { label: 'ML Integrity', data: [25, 25, 25, 25], backgroundColor: '#4b5563' }, // W2
+                    { label: 'NLP Strategy', data: [25, 25, 17.5, 25], backgroundColor: '#9ca3af' }, // W3
+                    { label: 'Execution', data: [24, 24.75, 24.75, 16.5], backgroundColor: '#d1d5db' } // W4
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { 
+                    x: { stacked: true, grid: { display: false } }, 
+                    y: { stacked: true, max: 100, grid: { color: '#f3f4f6' } } 
+                },
+                plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } } }
+            }
+        });
+
+        // 3. Execution Efficiency Frontier (Scatter)
+        // X: Time, Y: Cost. Size: Score impact (inverse)
+        new Chart(document.getElementById('executionScatterChart'), {
+            type: 'scatter',
+            data: {
+                datasets: [
+                    {
+                        label: 'Sonnet 4.5',
+                        data: [{x: 195, y: 5871}],
+                        backgroundColor: '#1a1a1a',
+                        pointRadius: 8
+                    },
+                    {
+                        label: 'Gemini 3 Pro',
+                        data: [{x: 449, y: 49414}],
+                        backgroundColor: '#4b5563',
+                        pointRadius: 8
+                    },
+                    {
+                        label: 'Opus 4.5',
+                        data: [{x: 500, y: 19129}],
+                        backgroundColor: '#9ca3af',
+                        pointRadius: 8
+                    },
+                    {
+                        label: 'GPT-5.1',
+                        data: [{x: 500, y: 349285}],
+                        backgroundColor: '#dc2626',
+                        pointRadius: 8,
+                        pointStyle: 'crossRot'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { title: { display: true, text: 'Time to Complete (min)' }, min: 0, max: 600, grid: { color: '#f3f4f6' } },
+                    y: { title: { display: true, text: 'Transaction Cost ($)' }, type: 'logarithmic', grid: { color: '#f3f4f6' } }
+                },
+                plugins: { legend: { position: 'bottom', labels: { boxWidth: 10 } } }
+            }
+        });
+
+        // 4. Radar & Equity Charts (Existing)
+        new Chart(document.getElementById('radarChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Math', 'ML', 'NLP', 'Exec'],
+                datasets: [
+                    { label: 'Gemini', data: [87, 100, 100, 96], borderColor: '#000', borderWidth: 2, pointRadius: 0 },
+                    { label: 'Opus', data: [97, 100, 70, 99], borderColor: '#666', borderWidth: 1, borderDash: [5,5], pointRadius: 0 },
+                    { label: 'GPT', data: [47, 100, 100, 66], borderColor: '#dc2626', borderWidth: 1, pointRadius: 0 }
+                ]
+            },
+            options: {
+                scales: { r: { min: 0, max: 100, ticks: { display: false } } },
+                plugins: { legend: { position: 'bottom', labels: { boxWidth: 8 } } }
+            }
+        });
+
+        const points = 50;
+        const labels = Array.from({length: points}, (_, i) => i);
+        const geminiEq = labels.map(i => 100 + (i/points * 10) + (Math.random()));
+        const sonnetEq = labels.map(i => 100 + (i/points * 0.13) + (Math.random() * 0.5));
+        const opusEq = labels.map(i => 100 - (i/points * 4.2) + (Math.random() * 0.5));
+        const gptEq = labels.map(i => 100 * Math.exp(0.29 * (i/points)));
+
+        new Chart(document.getElementById('equityChart'), {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    { label: 'Gemini', data: geminiEq, borderColor: '#000', borderWidth: 1.5, pointRadius: 0, tension: 0.4 },
+                    { label: 'GPT', data: gptEq, borderColor: '#dc2626', borderWidth: 1, pointRadius: 0, tension: 0.4 },
+                    { label: 'Opus', data: opusEq, borderColor: '#666', borderWidth: 1, borderDash: [5,5], pointRadius: 0, tension: 0.1 }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom', labels: { boxWidth: 10 } }, tooltip: { mode: 'index', intersect: false } },
+                scales: { x: { display: false }, y: { grid: { borderDash: [2, 2], color: '#e5e7eb' }, ticks: { callback: (val) => '$' + val } } }
+            }
+        });
+    </script>
+</body>
+</html>
