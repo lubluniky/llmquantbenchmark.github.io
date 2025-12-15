@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Quant Benchmark: Extended Strategic Audit</title>
+    <title>AI Quant Benchmark: Strategic Audit v3.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -70,6 +70,14 @@
         td { border-bottom: 1px solid #e5e7eb; padding: 10px; vertical-align: middle; }
         tr:last-child td { border-bottom: 1px solid #000; }
 
+        .score-box {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 700;
+            padding: 4px 8px;
+            background: #f3f4f6;
+            display: inline-block;
+        }
+
         .scenario-badge {
             display: inline-block;
             padding: 2px 8px;
@@ -111,10 +119,10 @@
         <div class="flex justify-between items-end mb-12">
             <div>
                 <div class="label">Research Division • Algorithmic Intelligence</div>
-                <h1 class="text-4xl font-black mt-2">LLM Quant Benchmark<br>Extended Audit Report</h1>
+                <h1 class="text-4xl font-black mt-2">LLM Quant Benchmark<br>New Gen Audit</h1>
             </div>
             <div class="text-right">
-                <div class="mono text-sm">REF: 2025-Q4-EXT</div>
+                <div class="mono text-sm">REF: 2025-Q4-UPD</div>
                 <div class="mono text-sm">DATE: DEC 15, 2025</div>
                 <div class="mono text-sm font-bold">STATUS: FINALIZED</div>
             </div>
@@ -123,24 +131,24 @@
         <!-- Executive Summary Metrics -->
         <div class="metric-grid">
             <div class="metric-card winner">
-                <div class="label">Top Generalist</div>
-                <div class="value">Gemini 3 Pro</div>
-                <div class="text-xs mt-2 mono">Score: 95.75</div>
+                <div class="label">New Champion</div>
+                <div class="value">GPT-5.2</div>
+                <div class="text-xs mt-2 mono">Score: 99.50</div>
             </div>
             <div class="metric-card">
                 <div class="label">Top Researcher</div>
-                <div class="value">Gemini 3 Pro</div>
-                <div class="text-xs mt-2 text-gray-500">Score: 97.40</div>
+                <div class="value">GPT-5.2</div>
+                <div class="text-xs mt-2 text-gray-500">Perfect 100.0 Score</div>
             </div>
             <div class="metric-card">
                 <div class="label">Best Execution</div>
                 <div class="value">Sonnet 4.5</div>
-                <div class="text-xs mt-2 text-gray-500">Cost Efficiency Leader</div>
+                <div class="text-xs mt-2 text-gray-500">Lowest Cost ($5.8k)</div>
             </div>
             <div class="metric-card">
-                <div class="label">Highest Alpha</div>
-                <div class="value">GPT-5.1</div>
-                <div class="text-xs mt-2 text-red-600">Risk Adjusted: Poor</div>
+                <div class="label">Most Improved</div>
+                <div class="value">+21 pts</div>
+                <div class="text-xs mt-2 text-green-600">GPT 5.1 &rarr; 5.2</div>
             </div>
         </div>
 
@@ -167,6 +175,15 @@
                 <tbody>
                     <tr>
                         <td class="font-bold">1</td>
+                        <td class="font-bold text-indigo-600">GPT-5.2 Thinking</td>
+                        <td class="text-right mono font-bold">100</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono">98</td>
+                        <td class="text-right mono bg-indigo-50 font-bold text-lg">99.50</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">2</td>
                         <td class="font-bold">Gemini 3 Pro</td>
                         <td class="text-right mono">87</td>
                         <td class="text-right mono">100</td>
@@ -175,7 +192,7 @@
                         <td class="text-right mono bg-gray-50 font-bold">95.75</td>
                     </tr>
                     <tr>
-                        <td class="font-bold">2</td>
+                        <td class="font-bold">3</td>
                         <td class="font-bold">Claude Opus 4.5</td>
                         <td class="text-right mono">97</td>
                         <td class="text-right mono">100</td>
@@ -184,7 +201,7 @@
                         <td class="text-right mono bg-gray-50 font-bold">91.50</td>
                     </tr>
                     <tr>
-                        <td class="font-bold">3</td>
+                        <td class="font-bold">4</td>
                         <td class="font-bold">Claude Sonnet 4.5</td>
                         <td class="text-right mono text-red-600">60</td>
                         <td class="text-right mono">100</td>
@@ -193,7 +210,7 @@
                         <td class="text-right mono bg-gray-50 font-bold">89.75</td>
                     </tr>
                     <tr>
-                        <td class="font-bold text-gray-400">4</td>
+                        <td class="font-bold text-gray-400">5</td>
                         <td class="font-bold text-gray-500">GPT-5.1 Codex</td>
                         <td class="text-right mono text-red-600">47</td>
                         <td class="text-right mono">100</td>
@@ -221,6 +238,15 @@
                 <tbody>
                     <tr>
                         <td class="font-bold">1</td>
+                        <td class="font-bold text-indigo-600">GPT-5.2 Thinking</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono border-l border-gray-300">100</td>
+                        <td class="text-right mono">100</td>
+                        <td class="text-right mono text-gray-300">--</td>
+                        <td class="text-right mono bg-indigo-50 font-bold text-lg">100.00</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">2</td>
                         <td class="font-bold">Gemini 3 Pro</td>
                         <td class="text-right mono">87</td>
                         <td class="text-right mono border-l border-gray-300">100</td>
@@ -229,7 +255,7 @@
                         <td class="text-right mono bg-gray-50 font-bold">97.40</td>
                     </tr>
                     <tr>
-                        <td class="font-bold">2</td>
+                        <td class="font-bold">3</td>
                         <td class="font-bold text-blue-800">Claude Sonnet 4.5</td>
                         <td class="text-right mono text-red-600">60</td>
                         <td class="text-right mono border-l border-gray-300">100</td>
@@ -238,22 +264,13 @@
                         <td class="text-right mono bg-gray-50 font-bold text-blue-800">92.00</td>
                     </tr>
                     <tr>
-                        <td class="font-bold">3</td>
+                        <td class="font-bold">4</td>
                         <td class="font-bold text-blue-800">GPT-5.1 Codex</td>
                         <td class="text-right mono text-red-600">47</td>
                         <td class="text-right mono border-l border-gray-300">100</td>
                         <td class="text-right mono">100</td>
                         <td class="text-right mono text-gray-300">--</td>
                         <td class="text-right mono bg-gray-50 font-bold text-blue-800">89.40</td>
-                    </tr>
-                    <tr>
-                        <td class="font-bold text-gray-400">4</td>
-                        <td class="font-bold text-gray-500">Claude Opus 4.5</td>
-                        <td class="text-right mono">97</td>
-                        <td class="text-right mono border-l border-gray-300">100</td>
-                        <td class="text-right mono text-orange-600">70</td>
-                        <td class="text-right mono text-gray-300">--</td>
-                        <td class="text-right mono bg-gray-50 font-bold text-gray-500">87.40</td>
                     </tr>
                 </tbody>
             </table>
@@ -267,7 +284,7 @@
             </div>
         </div>
 
-        <!-- 03. Advanced Analytics (NEW SECTION) -->
+        <!-- 03. Advanced Analytics -->
         <div class="mb-12">
             <h3 class="text-lg font-bold border-b border-gray-200 pb-2 uppercase tracking-widest text-xs">03. Advanced Analytics</h3>
             
@@ -278,7 +295,6 @@
                     <div class="h-64">
                         <canvas id="stackedScoreChart"></canvas>
                     </div>
-                    <p class="text-xs text-center mt-2 text-gray-500 italic">Breakdown of points by benchmark phase.</p>
                 </div>
 
                 <!-- Efficiency Frontier -->
@@ -287,21 +303,25 @@
                     <div class="h-64">
                         <canvas id="executionScatterChart"></canvas>
                     </div>
-                    <p class="text-xs text-center mt-2 text-gray-500 italic">X: Time (min), Y: Cost ($). Bottom-left is ideal.</p>
+                    <p class="text-xs text-center mt-2 text-gray-500 italic">Sonnet is fastest/cheapest. GPT-5.1 is outlier.</p>
                 </div>
             </div>
         </div>
 
-        <!-- 04. Technical Charts -->
+        <!-- 04. Technical Charts (Restored) -->
         <div class="mb-12">
             <h3 class="text-lg font-bold border-b border-gray-200 pb-2 uppercase tracking-widest text-xs">04. Technical Performance</h3>
+            
             <div class="grid grid-cols-2 gap-8 mt-6">
+                <!-- Radar Chart -->
                 <div>
                     <h4 class="text-xs font-bold text-center uppercase mb-4 text-gray-500">Competency Radar</h4>
                     <div class="h-64">
                         <canvas id="radarChart"></canvas>
                     </div>
                 </div>
+
+                <!-- Equity Curve -->
                 <div>
                     <h4 class="text-xs font-bold text-center uppercase mb-4 text-gray-500">Simulated Equity Curve (Phase III)</h4>
                     <div class="h-64">
@@ -311,9 +331,30 @@
             </div>
         </div>
 
+        <!-- Wave 4 Deep Dive update -->
+        <div class="bg-gray-50 p-6 border border-gray-200 mb-12">
+            <h4 class="font-bold text-sm uppercase mb-2">Spotlight: GPT-5.2 Performance Upgrade</h4>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                    <p class="text-gray-700 mb-2">
+                        <strong>The "Thinking High" Effect:</strong><br>
+                        Unlike v5.1 which rushed to execution, v5.2 spent 0.65s in "thinking" mode during Math optimization (W1). This allowed it to correctly deduce the need for <code>bounds</code> in Kalman Filtering and correct Stop-Loss logic.
+                    </p>
+                </div>
+                <div>
+                    <strong class="block mb-1">Execution (W4) Comparison:</strong>
+                    <ul class="list-disc pl-4 space-y-1 text-gray-600">
+                        <li>GPT-5.1: $349k cost (Fat Finger)</li>
+                        <li>GPT-5.2: $25k cost (Safe TWAP)</li>
+                        <li>Sonnet: $5.8k cost (HFT Optimized)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <!-- Footer -->
         <div class="mt-16 pt-8 border-t border-gray-300 text-center text-xs text-gray-400 font-serif">
-            <p>Generated by Ultimate Quant Benchmark Suite • Extended Version 2.1</p>
+            <p>Generated by Ultimate Quant Benchmark Suite • Extended Version 2.2</p>
             <p>Confidential • Internal Use Only</p>
         </div>
 
@@ -323,22 +364,22 @@
         Chart.defaults.font.family = "'Inter', sans-serif";
         Chart.defaults.color = '#333';
         
-        // 1. Comparison Chart (Roles)
+        // 1. Comparison Chart
         new Chart(document.getElementById('comparisonChart'), {
             type: 'bar',
             data: {
-                labels: ['Gemini 3 Pro', 'Claude Sonnet 4.5', 'Claude Opus 4.5', 'GPT-5.1'],
+                labels: ['GPT-5.2 Thinking', 'Gemini 3 Pro', 'Opus 4.5', 'Sonnet 4.5', 'GPT-5.1'],
                 datasets: [
                     {
                         label: 'Scenario A: General Partner',
-                        data: [95.75, 89.75, 91.50, 78.25],
+                        data: [99.50, 95.75, 91.50, 89.75, 78.25],
                         backgroundColor: '#1a1a1a',
                         barPercentage: 0.6,
                         categoryPercentage: 0.8
                     },
                     {
                         label: 'Scenario B: Quant Researcher',
-                        data: [97.40, 92.00, 87.40, 89.40],
+                        data: [100.00, 97.40, 87.40, 92.00, 89.40],
                         backgroundColor: '#9ca3af',
                         barPercentage: 0.6,
                         categoryPercentage: 0.8
@@ -353,113 +394,159 @@
             }
         });
 
-        // 2. Stacked Score Chart (Decomposition)
-        // Normalized contributions (approx 25 pts per wave max)
+        // 2. Stacked Score Chart
         new Chart(document.getElementById('stackedScoreChart'), {
             type: 'bar',
             data: {
-                labels: ['Gemini 3 Pro', 'Sonnet 4.5', 'Opus 4.5', 'GPT-5.1'],
+                labels: ['GPT-5.2', 'Gemini', 'Opus', 'Sonnet', 'GPT-5.1'],
                 datasets: [
-                    { label: 'Math/Risk', data: [21.75, 15, 24.25, 11.75], backgroundColor: '#1a1a1a' }, // W1
-                    { label: 'ML Integrity', data: [25, 25, 25, 25], backgroundColor: '#4b5563' }, // W2
-                    { label: 'NLP Strategy', data: [25, 25, 17.5, 25], backgroundColor: '#9ca3af' }, // W3
-                    { label: 'Execution', data: [24, 24.75, 24.75, 16.5], backgroundColor: '#d1d5db' } // W4
+                    { label: 'Math', data: [25, 21.75, 24.25, 15, 11.75], backgroundColor: '#1a1a1a' },
+                    { label: 'ML', data: [25, 25, 25, 25, 25], backgroundColor: '#4b5563' },
+                    { label: 'NLP', data: [25, 25, 17.5, 25, 25], backgroundColor: '#9ca3af' },
+                    { label: 'Exec', data: [24.5, 24, 24.75, 24.75, 16.5], backgroundColor: '#d1d5db' }
                 ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                scales: { 
-                    x: { stacked: true, grid: { display: false } }, 
-                    y: { stacked: true, max: 100, grid: { color: '#f3f4f6' } } 
-                },
+                scales: { x: { stacked: true, grid: { display: false } }, y: { stacked: true, max: 100, grid: { color: '#f3f4f6' } } },
                 plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } } }
             }
         });
 
-        // 3. Execution Efficiency Frontier (Scatter)
-        // X: Time, Y: Cost. Size: Score impact (inverse)
+        // 3. Efficiency Frontier
         new Chart(document.getElementById('executionScatterChart'), {
             type: 'scatter',
             data: {
                 datasets: [
-                    {
-                        label: 'Sonnet 4.5',
-                        data: [{x: 195, y: 5871}],
-                        backgroundColor: '#1a1a1a',
-                        pointRadius: 8
-                    },
-                    {
-                        label: 'Gemini 3 Pro',
-                        data: [{x: 449, y: 49414}],
-                        backgroundColor: '#4b5563',
-                        pointRadius: 8
-                    },
-                    {
-                        label: 'Opus 4.5',
-                        data: [{x: 500, y: 19129}],
-                        backgroundColor: '#9ca3af',
-                        pointRadius: 8
-                    },
-                    {
-                        label: 'GPT-5.1',
-                        data: [{x: 500, y: 349285}],
-                        backgroundColor: '#dc2626',
-                        pointRadius: 8,
-                        pointStyle: 'crossRot'
-                    }
+                    { label: 'Sonnet', data: [{x: 195, y: 5871}], backgroundColor: '#1a1a1a', pointRadius: 8 },
+                    { label: 'Opus', data: [{x: 500, y: 19129}], backgroundColor: '#4b5563', pointRadius: 8 },
+                    { label: 'GPT-5.2', data: [{x: 500, y: 25973}], backgroundColor: '#4f46e5', pointRadius: 10, pointStyle: 'rectRot' },
+                    { label: 'Gemini', data: [{x: 449, y: 49414}], backgroundColor: '#9ca3af', pointRadius: 8 },
+                    { label: 'GPT-5.1', data: [{x: 500, y: 349285}], backgroundColor: '#dc2626', pointRadius: 8, pointStyle: 'crossRot' }
                 ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
-                    x: { title: { display: true, text: 'Time to Complete (min)' }, min: 0, max: 600, grid: { color: '#f3f4f6' } },
-                    y: { title: { display: true, text: 'Transaction Cost ($)' }, type: 'logarithmic', grid: { color: '#f3f4f6' } }
+                    x: { title: { display: true, text: 'Time (min)' }, min: 0, max: 600, grid: { color: '#f3f4f6' } },
+                    y: { title: { display: true, text: 'Cost ($)' }, type: 'logarithmic', min: 1000, max: 1000000, grid: { color: '#f3f4f6' } }
                 },
                 plugins: { legend: { position: 'bottom', labels: { boxWidth: 10 } } }
             }
         });
 
-        // 4. Radar & Equity Charts (Existing)
+        // 4. Competency Radar
         new Chart(document.getElementById('radarChart'), {
             type: 'radar',
             data: {
-                labels: ['Math', 'ML', 'NLP', 'Exec'],
+                labels: ['Math/Risk', 'ML Integrity', 'NLP Strategy', 'Execution'],
                 datasets: [
-                    { label: 'Gemini', data: [87, 100, 100, 96], borderColor: '#000', borderWidth: 2, pointRadius: 0 },
-                    { label: 'Opus', data: [97, 100, 70, 99], borderColor: '#666', borderWidth: 1, borderDash: [5,5], pointRadius: 0 },
-                    { label: 'GPT', data: [47, 100, 100, 66], borderColor: '#dc2626', borderWidth: 1, pointRadius: 0 }
+                    {
+                        label: 'GPT-5.2',
+                        data: [100, 100, 100, 98],
+                        borderColor: '#4f46e5', // Indigo
+                        borderWidth: 2,
+                        backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                        pointRadius: 0
+                    },
+                    {
+                        label: 'Gemini 3 Pro',
+                        data: [87, 100, 100, 96],
+                        borderColor: '#000',
+                        borderWidth: 2,
+                        backgroundColor: 'rgba(0,0,0,0.05)',
+                        pointRadius: 0
+                    },
+                    {
+                        label: 'Opus 4.5',
+                        data: [97, 100, 70, 99],
+                        borderColor: '#666',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        fill: false,
+                        pointRadius: 0
+                    }
                 ]
             },
             options: {
-                scales: { r: { min: 0, max: 100, ticks: { display: false } } },
-                plugins: { legend: { position: 'bottom', labels: { boxWidth: 8 } } }
+                scales: {
+                    r: {
+                        min: 0,
+                        max: 100,
+                        ticks: { display: false, stepSize: 20 },
+                        pointLabels: { font: { size: 9, weight: 'bold' } }
+                    }
+                },
+                plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } } }
             }
         });
 
+        // 5. Equity Curve
         const points = 50;
         const labels = Array.from({length: points}, (_, i) => i);
+        
         const geminiEq = labels.map(i => 100 + (i/points * 10) + (Math.random()));
+        const gpt52Eq = labels.map(i => 100 + (i/points * 13) + (Math.random()));
         const sonnetEq = labels.map(i => 100 + (i/points * 0.13) + (Math.random() * 0.5));
         const opusEq = labels.map(i => 100 - (i/points * 4.2) + (Math.random() * 0.5));
-        const gptEq = labels.map(i => 100 * Math.exp(0.29 * (i/points)));
+        const gpt51Eq = labels.map(i => 100 * Math.exp(0.29 * (i/points)));
 
         new Chart(document.getElementById('equityChart'), {
             type: 'line',
             data: {
                 labels: labels,
                 datasets: [
-                    { label: 'Gemini', data: geminiEq, borderColor: '#000', borderWidth: 1.5, pointRadius: 0, tension: 0.4 },
-                    { label: 'GPT', data: gptEq, borderColor: '#dc2626', borderWidth: 1, pointRadius: 0, tension: 0.4 },
-                    { label: 'Opus', data: opusEq, borderColor: '#666', borderWidth: 1, borderDash: [5,5], pointRadius: 0, tension: 0.1 }
+                    { 
+                        label: 'GPT-5.2 (+13%)', 
+                        data: gpt52Eq, 
+                        borderColor: '#4f46e5', 
+                        borderWidth: 2, 
+                        pointRadius: 0,
+                        tension: 0.4
+                    },
+                    { 
+                        label: 'Gemini (+10%)', 
+                        data: geminiEq, 
+                        borderColor: '#000000', 
+                        borderWidth: 2, 
+                        pointRadius: 0,
+                        tension: 0.4
+                    },
+                    { 
+                        label: 'GPT-5.1 (+33%)', 
+                        data: gpt51Eq, 
+                        borderColor: '#dc2626', 
+                        borderWidth: 1, 
+                        pointRadius: 0,
+                        tension: 0.4
+                    },
+                    { 
+                        label: 'Sonnet (+0.1%)', 
+                        data: sonnetEq, 
+                        borderColor: '#9ca3af', 
+                        borderWidth: 2, 
+                        borderDash: [5, 5],
+                        pointRadius: 0,
+                        tension: 0.1
+                    }
                 ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { position: 'bottom', labels: { boxWidth: 10 } }, tooltip: { mode: 'index', intersect: false } },
-                scales: { x: { display: false }, y: { grid: { borderDash: [2, 2], color: '#e5e7eb' }, ticks: { callback: (val) => '$' + val } } }
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 10, usePointStyle: true } },
+                    tooltip: { mode: 'index', intersect: false }
+                },
+                scales: {
+                    x: { display: false },
+                    y: { 
+                        grid: { borderDash: [2, 2], color: '#e5e7eb' },
+                        ticks: { callback: (val) => '$' + val } 
+                    }
+                }
             }
         });
     </script>
